@@ -23,7 +23,7 @@ Spotify Web API (client credentials flow)
 
 ### Example of how to call/invoke the API, and a description of what data comes back
 
-The Spotify Web API uses REST principles to return JSON metadata from the Spotify Data Catalogue. I created a sample app.js file using the client credentials flow to produce a response that includes album information, given a Spotify album ID number. The client credentials flow does not ask the site user for their Spotify information; it only authenticates the request via the developer(client) credentials.
+The Spotify Web API uses REST principles to return JSON metadata from the Spotify Data Catalogue. The client credentials flow, which I will be using for this project, does not ask the site user for their Spotify information; it only authenticates the request via the developer(client) credentials. Below is sample data that I created that includes the GET album method, given a Spotify album ID number. For my actual project, I will be using the GET search method.
 
 ```sh
 {
@@ -108,14 +108,15 @@ The Spotify Web API uses REST principles to return JSON metadata from the Spotif
 
 ## MVP goals
 
-- create user database for storing user login data
-- set up user form to successfully call Spotify Web API to GET albums from a selected genre for a certain year**
-- create one-to-many relationship between 1 user and many result inputs
-- save user result inputs to results database, and make a page to display the user's past searches
+- create users database for storing user login data
+- create favorites database for storing user-favorited tracks (1:M one user can have many favorites)
+- create results database for storing user's past search queries for genre and year (1:M one user can have many past search queries)
+- use Spotify Web API's GET search tracks to populate results for a user-selected year and genre
+- using the user data stored in the database, make a page to display the user's past searches and a page displaying their favorited tracks
 
 ### Stretch goals
-- sort albums by popularity (this can be returned from GET albums) OR instead of grabbing entire album, grab most popular song from album (this is part of GET track operation)
-- explore including a "play" link or option (not sure how this works within the API, so I need to do more research)
+- sort tracks by popularity (this can be returned from GET albums) OR instead of grabbing entire album, grab most popular song from album (this is part of GET track operation)
+- explore including a link to the open spotify version of the track (this link is included in the API return)
 
 ## Potential roadblocks
 
