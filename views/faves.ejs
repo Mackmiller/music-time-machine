@@ -1,6 +1,8 @@
 <div class="text-center">
     <h1>All Your Favorite Songs</h1>
-    <%data.forEach(track => {%>
-
+    <%results.forEach(result => {%>
+        <h3>
+            <a href="<%= result.link %>"> <%= result.name %></a>
+        </h3>
     <%})%>
 </div>

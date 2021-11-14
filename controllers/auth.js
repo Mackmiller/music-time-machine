@@ -41,15 +41,19 @@ router.get('/login', (req, res)=>{
 
 router.post('/login', passport.authenticate('local', {
         failureRedirect: '/auth/login',
-        successRedirect: '/', // !-> FLASH <-!
+        //redirect to search.ejs
+        successRedirect: '/search', 
+        // !-> FLASH <-!
         failureFlash: 'Invalid username and/or password.',
         successFlash: 'You are now logged in.'
     })
 )
 
 router.get('/logout', (req, res)=>{
-    req.logout() // !-> FLASH <-!
+    req.logout() 
+    // !-> FLASH <-!
     req.flash('Success! You\'re logged out.')
+    //redirect to home.ejs
     res.redirect('/')
 })
 

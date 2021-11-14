@@ -38,7 +38,8 @@ app.use((req, res, next) => {
 })
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
-app.use('/results', require('./controllers/searchRoutes'))
+app.use('/search/results', require('./controllers/resultsRoutes'))
+app.use('/favorites', require('./controllers/favsRoutes'))
 
 
 // home route
@@ -49,6 +50,16 @@ app.get('/', (req, res)=>{
 // profile route
 app.get('/profile', isLoggedIn, (req, res)=>{
     res.render('profile')
+})
+
+// search route
+app.get('/search', isLoggedIn, (req, res)=>{
+    res.render('search')
+})
+
+// favorites route
+app.get('/favorites', isLoggedIn, (req, res)=>{
+    res.render('faves')
 })
 
 
