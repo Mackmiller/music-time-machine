@@ -1,7 +1,5 @@
-
 <%data.forEach(track => { %>
         <% let albumsInfo = track.album.images %>
-        <%console.log(albumsInfo[0].url)%>
         <img src="<%=albumsInfo[0].url%>" alt="album cover" style="height: 300px">%>
   
         <% let name = track.name %>
