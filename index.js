@@ -8,9 +8,13 @@ const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
 
 
+
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
+
+//static middleware
+app.use(express.static("public"))
 
 // body parser middelware
 app.use(express.urlencoded({extended:false}))
