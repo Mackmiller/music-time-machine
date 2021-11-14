@@ -1,16 +1,21 @@
-<%data.forEach(track => { %>
-        <% let albumsInfo = track.album.images %>
-        <img src="<%=albumsInfo[0].url%>" alt="album cover" style="height: 300px">%>
-  
-        <% let name = track.name %>
-   <%  let spotifyLink = track.external_urls.spotify %>
-    <h3><a href="<%=spotifyLink%>"><%=name%></a></h3>
-    <%  let artistInfo = track.artists %>
-    <%   artistInfo.forEach(artist => { %>
-        <h5><%=artist.name%></h5>
-        <%   }) %>
-        <form method="POST" action="/results">
-            <input hidden type="text" name="name" value="<%= track.name %>">
-            <button class="btn bg-primary" type="submit">Add to Favorites</button>
-          </form>
-<% }) %>
+
+  <%data.forEach(track => { %>
+    <div class=album>
+          <% let albumsInfo = track.album.images %>
+          <img src="<%=albumsInfo[0].url%>" alt="album cover" style="height: 300px">%>
+    
+          <% let name = track.name %>
+    <%  let spotifyLink = track.external_urls.spotify %>
+      <h3><a href="<%=spotifyLink%>"><%=name%></a></h3>
+      <%  let artistInfo = track.artists %>
+      <%   artistInfo.forEach(artist => { %>
+          <h5><%=artist.name%></h5>
+          <%   }) %>
+          <form method="POST" action="/results">
+              <input hidden type="text" name="name" value="<%= track.name %>">
+              <button class="btn bg-primary" type="submit">Add to Favorites</button>
+            </form>
+    </div>
+  <% }) %>
+
+

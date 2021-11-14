@@ -1,6 +1,8 @@
 require('dotenv').config()
 const express = require('express')
 const router = express.Router()
+//static middleware
+router.use(express.static( "public"))
 
 const request = require('request'); // "Request" library
 const client_id = `${process.env.SPOTIFY_CLIENT_ID}`; // Your client id

@@ -14,7 +14,7 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 
 //static middleware
-app.use(express.static("public"))
+app.use(express.static( "public"))
 
 // body parser middelware
 app.use(express.urlencoded({extended:false}))
