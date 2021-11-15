@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
             };
             request.get(options, function(error, response, body) {
                 let data = body.tracks.items
-                res.render("results/index", {data: data})
+                res.render("results", {data: data})
             });
         }
     })
