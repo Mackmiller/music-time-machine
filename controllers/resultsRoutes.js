@@ -58,9 +58,9 @@ router.post('/results', (req, res) => {
             };
             request.get(options, function(error, response, body) {
                 let data = body.tracks.items
-                console.log(data)
+                //console.log(year)
                 if (data.length === 0) {
-                    res.render("results2")
+                    res.render("noresults", {year: year, genre: genre})
                 } else{
                 res.render("results", {data: data})
                 }
