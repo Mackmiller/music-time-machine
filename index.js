@@ -57,6 +57,11 @@ app.get('/search', isLoggedIn, (req, res)=>{
     res.render('search')
 })
 
+// search results route
+app.get('/search/results', isLoggedIn, (req, res)=>{
+    res.render('results/index')
+})
+
 // favorites route
 app.get('/favorites', isLoggedIn, (req, res)=>{
     res.render('faves')
