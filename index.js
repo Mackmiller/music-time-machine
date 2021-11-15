@@ -7,14 +7,12 @@ const passport = require('./config/ppConfig')
 const flash = require('connect-flash')
 const isLoggedIn = require('./middleware/isLoggedIn')
 
-
+//static middleware
+app.use(express.static( "public"))
 
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
-
-//static middleware
-app.use(express.static( "public"))
 
 // body parser middelware
 app.use(express.urlencoded({extended:false}))
@@ -38,8 +36,7 @@ app.use((req, res, next) => {
 })
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
-app.use('/search', require('./controllers/searchRoutes'))
-app.use('/search/results', require('./controllers/resultsRoutes'))
+app.use('/search', require('./controllers/resultsRoutes'))
 app.use('/favorites', require('./controllers/favsRoutes'))
 
 

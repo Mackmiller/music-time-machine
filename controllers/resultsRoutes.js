@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const router = express.Router()
 //static middleware
-router.use(express.static( "public"))
+// router.use(express.static( "public"))
 
 const request = require('request'); // "Request" library
 const client_id = `${process.env.SPOTIFY_CLIENT_ID}`; // Your client id
@@ -28,9 +28,7 @@ const client_secret = `${process.env.SPOTIFY_CLIENT_SECRET}`; // Your secret
 //     })
 // })
 
-//?? CHECK ON THIS
-//router.get('/search/results', (req, res) => {
-router.post('/', (req, res) => {
+router.post('/results', (req, res) => {
     // your application requests authorization
     var authOptions = {
         url: 'https://accounts.spotify.com/api/token',
