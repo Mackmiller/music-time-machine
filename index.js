@@ -38,6 +38,7 @@ app.use((req, res, next) => {
 })
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
+app.use('/search', require('./controllers/searchRoutes'))
 app.use('/search/results', require('./controllers/resultsRoutes'))
 app.use('/favorites', require('./controllers/favsRoutes'))
 
@@ -59,12 +60,17 @@ app.get('/search', isLoggedIn, (req, res)=>{
 
 // search results route
 app.get('/search/results', isLoggedIn, (req, res)=>{
-    res.render('results/index')
+    res.render('results')
 })
 
 // favorites route
 app.get('/favorites', isLoggedIn, (req, res)=>{
     res.render('faves')
+})
+
+// history route
+app.get('/search/history', isLoggedIn, (req, res)=>{
+    res.render('history')
 })
 
 

@@ -42,7 +42,7 @@ router.get('/login', (req, res)=>{
 router.post('/login', passport.authenticate('local', {
         failureRedirect: '/auth/login',
         //redirect to search.ejs
-        successRedirect: '/search/results', 
+        successRedirect: '/search', 
         // !-> FLASH <-!
         failureFlash: 'Invalid username and/or password.',
         successFlash: 'You are now logged in.'
