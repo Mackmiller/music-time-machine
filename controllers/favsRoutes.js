@@ -6,9 +6,11 @@ const db = require('../models')
 //Retrieve all favorited tracks
 router.get('/', (req, res) => {
 
-    db.user.findOne()
-    .then(user=>{
-        user.getFavorites().then(favorites=>{
+    db.user.findOne({
+        where: {name: req.user.name}
+    })
+    .then(foundUser=>{
+        foundUser.getFavorites().then(favorites=>{
             res.render('faves', { favorites: favorites })
         })
     .catch(error =>{
@@ -22,10 +24,12 @@ router.post('/', (req, res) => {
     const data = JSON.parse(JSON.stringify(req.body))
     console.log('this is data', data)
 
-    db.user.findOne()
-    .then(user=> {
-        console.log("adding favorite to this user:", user.name)
-        user.createFavorite({
+    db.user.findOne({
+        where: {name: req.user.name}
+    })
+    .then(foundUser=> {
+        console.log("adding favorite to this user:", foundUser.name)
+        foundUser.createFavorite({
             trackName: data.name,
             trackLink: data.link
         }).then(fav=>{
