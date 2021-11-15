@@ -1,17 +1,23 @@
+<h2>What genre and year should we prepare for transport?</h2>
 <form method="POST" action="/search/results">
     <label for="genre">Choose a genre:</label>
     <select id="genre" name="genre">
-      <option value="blues">Blues</option>
+      <option value="alternative">Alternative</option>
+      <option value="disco">Blues</option>
+      <option value="bossanova">Bossa nova</option>
       <option value="bluegrass">Bluegrass</option>
       <option value="classical">Classical</option>
       <option value="club">Club</option>
       <option value="country">Country</option>
+      <option value="dance">Dance</option>
       <option value="disco">Disco</option>
+      <option value="electronic">Electronic</option>
       <option value="edm">EDM</option>
       <option value="emo">Emo</option>
       <option value="folk">Folk</option>
       <option value="funk">Funk</option>
       <option value="gospel">Gospel</option>
+      <option value="gospel">Goth</option>
       <option value="hip-hop">Hip Hop</option>
       <option value="holidays">Holidays</option>
       <option value="indie">Indie</option>
@@ -19,15 +25,18 @@
       <option value="k-pop">Kpop</option>
       <option value="metal">Metal</option>
       <option value="new-age">New Age</option>
+      <option value="opera">Opera</option>
       <option value="piano">Piano</option>
       <option value="pop">Pop</option>
       <option value="punk">Punk</option>
+      <option value="punk-rock">Punk Rock</option>
       <option value="r-n-b">RnB</option>
       <option value="reggae">Reggae</option>
       <option value="rock">Rock</option>
     </select>
     <label for="year">Choose a year:</label>
     <select id="year" name="year">
+      <option value="2021">2021</option>
       <option value="2020">2020</option>
       <option value="2019">2019</option>
       <option value="2018">2018</option>
@@ -100,5 +109,5 @@
       <option value="1951">1951</option>
       <option value="1950">1950</option>
     </select>
-    <input type="submit">
+    <input id="submit" type="submit">
   </form>

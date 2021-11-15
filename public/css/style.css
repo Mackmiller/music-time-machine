@@ -9,8 +9,14 @@ body {
 header {
     text-align: center;
 }
+
+nav ul {
+   text-align: right;
+    
+}
 nav li {
-    padding-top: 5px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 h1 {
@@ -20,7 +26,7 @@ h1 {
     font-family: 'Pacifico', cursive; */
 }
 
-h2,h4 {
+h2,h3,h4 {
     text-align: center;
 }
 
@@ -40,6 +46,10 @@ h5 {
     padding-top: 3px;
 }
 
+form {
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -55,6 +65,17 @@ a:hover {
     text-decoration: underline;
 }
 
+a.nodata {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #AAAAAA;
+}
+
+a.nodata:hover {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
 button {
     font-family: inherit;
     font-weight: 600;
@@ -64,13 +85,22 @@ button {
     margin-top: 10px;
 }
 
-.signup {
+.nodata {
+  text-align: center;
+}
+
+.nodata a {
+    color: #AAAAAA;
+    text-decoration: underline;
+  }
+
+.signup, .favorites {
     font-weight: 500;
     color: #AAAAAA;
     text-decoration: none;
 }
 
-.signup:hover {
+.signup:hover, .favorites:hover {
     font-weight: 500;
     color: #FFFFFF;
     text-decoration: none;
@@ -79,4 +109,22 @@ button {
 .album {
     margin: 30px 0;
     text-align: center;
+}
+
+#genre, #year {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#submit {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #65D36E;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
 }

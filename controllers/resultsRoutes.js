@@ -62,7 +62,7 @@ router.post('/results', (req, res) => {
                 if (data.length === 0) {
                     res.render("noresults", {year: year, genre: genre})
                 } else{
-                res.render("results", {data: data})
+                res.render("results", {year:year, genre: genre, data: data})
                 }
             }
             );
