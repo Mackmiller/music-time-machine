@@ -46,7 +46,7 @@ router.post('/results', (req, res) => {
             // use the access token to access the Spotify Web API
             var token = body.access_token;
             const formData = JSON.parse(JSON.stringify(req.body))
-            //console.log('this is data', formData)
+            //console.log('this is data' + formData)
             var year = formData.year
             var genre = formData.genre
             var options = {
@@ -58,9 +58,15 @@ router.post('/results', (req, res) => {
             };
             request.get(options, function(error, response, body) {
                 let data = body.tracks.items
+                console.log(data)
+                if (data.length === 0) {
+                    res.render("results2")
+                } else{
                 res.render("results", {data: data})
-            });
-        }
+                }
+            }
+            );
+        } 
     })
 })
 
