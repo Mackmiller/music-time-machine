@@ -50,27 +50,27 @@ app.get('/', (req, res)=>{
 
 // profile route
 app.get('/profile', isLoggedIn, (req, res)=>{
-    res.render('profile')
+    res.render('user/profile')
 })
 
 // search route
 app.get('/search', isLoggedIn, (req, res)=>{
-    res.render('search')
+    res.render('search/search')
 })
 
 // search results route
 app.get('/search/results', isLoggedIn, (req, res)=>{
-    res.render('results')
+    res.render('search/results')
 })
 
 // favorites route
 app.get('/favorites', isLoggedIn, (req, res)=>{
-    res.render('faves')
+    res.render('favorites/faves')
 })
 
 // history route
 app.get('/search/history', isLoggedIn, (req, res)=>{
-    res.render('history')
+    res.render('search/history')
 })
 
 

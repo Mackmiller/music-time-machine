@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     })
     .then(foundUser=>{
         foundUser.getFavorites().then(favorites=>{
-            res.render('faves', { favorites: favorites })
+            res.render('favorites/faves', { favorites: favorites })
         })
     .catch(error =>{
         console.error

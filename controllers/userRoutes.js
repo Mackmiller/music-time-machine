@@ -5,7 +5,7 @@ const db = require('../models')
 
 //get user update form
 router.get("/edit", (req, res)=>{
-    res.render("userEdit")
+    res.render("user/userEdit")
 })
 
 //update a user

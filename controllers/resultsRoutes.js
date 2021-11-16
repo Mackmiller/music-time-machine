@@ -37,6 +37,7 @@ router.post('/results', (req, res) => {
                 },
                 json: true
             };
+            //create data for history dt
             db.user.findOne({
                 where: {name: req.user.name}
             })
@@ -55,9 +56,9 @@ router.post('/results', (req, res) => {
                 let data = body.tracks.items
                 //console.log(year)
                 if (data.length === 0) {
-                    res.render("noresults", {year: year, genre: genre})
+                    res.render("search/noresults", {year: year, genre: genre})
                 } else{
-                res.render("results", {year:year, genre: genre, data: data})
+                res.render("search/results", {year:year, genre: genre, data: data})
                 }
             }
             );
@@ -73,36 +74,12 @@ router.get('/history', (req, res) => {
     })
     .then(foundUser=>{
         foundUser.getHistories().then(histories=>{
-            res.render('history', { histories: histories })
+            res.render('search/history', { histories: histories })
         })
     .catch(error =>{
         console.error
         })
     })
 })
-
-// //Creates a new result history
-// router.post('/history', (req, res) => {
-//     const data = JSON.parse(JSON.stringify(req.body))
-//     console.log('this is data', data)
-//     var historyYear = formData.year
-//     var historyGenre = formData.genre
-
-//     db.user.findOne({
-//         where: {name: req.user.name}
-//     })
-//     .then(foundUser=> {
-//         console.log("adding favorite to this user:", foundUser.name)
-//         foundUser.createHistory({
-//             genre: historyGenre,
-//             year: historyYear
-//         }).then(res=>{
-//             console.log('db instance created: \n', res)
-//             //redirects back to favorites ejs
-//             //res.redirect("/favorites")
-//         });
-//     })
-// })
-
 
 module.exports = router
