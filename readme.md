@@ -16,10 +16,6 @@ HTML, CSS, JavaScript, PostgreSQL, Sequelize, Express, Node, EJS
 
 <img alt="erd" src="imgs/erd.png">
 
-## CRUD RESTful Routes
-
-<img alt="crud" src="imgs/crud.png">
-
 ## API
 
 Spotify Web API (client credentials flow)
@@ -121,6 +117,10 @@ The Spotify Web API uses REST principles to return JSON metadata from the Spotif
 ### Stretch goals
 - sort tracks by popularity (this can be returned from GET albums) OR instead of grabbing entire album, grab most popular song from album (this is part of GET track operation)
 - explore including a link to the open spotify version of the track (this link is included in the API return)
+
+## CRUD RESTful Routes
+
+<img alt="crud" src="imgs/crud.png">
 
 ## Potential roadblocks
 
