@@ -1,14 +1,11 @@
-<div class= data>
-    <a href="/search">Return to Search</a>
-  </div>
 <div class="text-center">
-    <h2>Favorited Songs:</h2>
+    <h2>Favorite Songs:</h2>
     <%favorites.forEach(favorite => {%>
-        <h4>
-            <a href="<%= favorite.trackLink %>"> <%= favorite.trackName %></a>
-        </h4>
-        <form action="/favorites/?_method=DELETE" method="POST">
-            <input type="submit" value="Delete">
-        </form>
+        <div class="favorites">
+            <h4><a href="<%= favorite.trackLink %>"> <%= favorite.trackName %></a></h4>
+            <form class="button" action="/favorites/?_method=DELETE" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
     <%})%>
 </div>
