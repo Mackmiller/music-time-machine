@@ -37,17 +37,6 @@ router.post('/results', (req, res) => {
                 },
                 json: true
             };
-            request.get(options, function(error, response, body) {
-                let data = body.tracks.items
-                //console.log(year)
-                if (data.length === 0) {
-                    res.render("noresults", {year: year, genre: genre})
-                } else{
-                res.render("results", {year:year, genre: genre, data: data})
-                }
-            }
-            );
-        
             db.user.findOne({
                 where: {name: req.user.name}
             })
@@ -62,6 +51,16 @@ router.post('/results', (req, res) => {
                     //res.redirect("/favorites")
                 });
             })
+            request.get(options, function(error, response, body) {
+                let data = body.tracks.items
+                //console.log(year)
+                if (data.length === 0) {
+                    res.render("noresults", {year: year, genre: genre})
+                } else{
+                res.render("results", {year:year, genre: genre, data: data})
+                }
+            }
+            );
         } 
     })
 })

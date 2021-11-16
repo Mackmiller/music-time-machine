@@ -1,9 +1,12 @@
+
 <div class="text-center">
-    <h2>Favorite Songs:</h2>
+    <h2>Search History:</h2>
     <%histories.forEach(history => {%>
-        <div class="favorites">
-            <h4><%= history.genre %></h4>
-            <h4><%= history.year %></h4>
+        <div class="history">
+            <%= history.genre %>: <%= history.year %>
         </div>
     <%})%>
 </div>
+<div class= data-search>
+    <a href="/search">New Search</a>
+  </div>

@@ -77,6 +77,15 @@ a:hover {
     color: #65D36E;
 }
 
+.data-search {
+    margin-top: 25px;
+}
+.data-search a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #65D36E;
+}
+
 
 button {
     font-family: inherit;
@@ -117,7 +126,7 @@ button {
     text-decoration: none;
 }
 
-.favorites {
+.favorites, .history {
     margin-top: 15px;
 }
 
