@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const ejsLayouts = require('express-ejs-layouts')
+const methodOverride = require("method-override")
 const session = require('express-session')
 const passport = require('./config/ppConfig')
 const flash = require('connect-flash')
@@ -13,7 +14,8 @@ app.use(express.static( "public"))
 // views (ejs and layouts) set up
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
-
+//PUT middleware
+app.use(methodOverride("_method"))
 // body parser middelware
 app.use(express.urlencoded({extended:false}))
 // session middleware
@@ -38,6 +40,7 @@ app.use((req, res, next) => {
 app.use('/auth', require('./controllers/auth'))
 app.use('/search', require('./controllers/resultsRoutes'))
 app.use('/favorites', require('./controllers/favsRoutes'))
+app.use('/profile', require('./controllers/userRoutes'))
 
 
 // home route
