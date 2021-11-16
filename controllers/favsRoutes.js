@@ -40,4 +40,26 @@ router.post('/', (req, res) => {
     })
 })
 
+//Deletes a favorite track
+router.delete('/', (req, res) => {
+    const data = JSON.parse(JSON.stringify(req.body))
+    console.log('this is data', data)
+
+    db.favorite.findOne({
+        where: {userId: req.user.id}
+    })
+    .then(foundFavorite=> {
+        console.log("deleting favorite from this user:", foundFavorite.userId)
+        foundFavorite.destroy({
+            where: {
+            trackName: data.trackName,
+            trackLink: data.trackLink}
+        }).then(deleted=>{
+            console.log('db instance deleted: \n', deleted)
+            //redirects back to favorites ejs
+            res.redirect("/favorites")
+        });
+    })
+})
+
 module.exports = router
