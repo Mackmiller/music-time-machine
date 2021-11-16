@@ -4,6 +4,7 @@ body {
     background-color: #131313;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 header {
@@ -64,16 +65,10 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-a.nodata {
+.data a {
     text-decoration: underline;
     font-weight: 500;
-    color: #AAAAAA;
-}
-
-a.nodata:hover {
-    font-weight: 500;
-    color: #FFFFFF;
+    color: #65D36E;
 }
 
 button {

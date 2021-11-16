@@ -1,5 +1,9 @@
 
-<h2>Top tunes in <%=year%> for <%=genre%></h2>
+<div class= data>
+  <a href="/search">Return to Search</a>
+</div>
+
+<h2>Top tunes in <%=year%> for <%=genre%> genre:</h2>
   
   <%data.forEach(track => { %>
     <div class=album>
@@ -21,5 +25,7 @@
             </form>
     </div>
   <% }) %>
-
+  <div class= data>
+    <a href="/search">Return to Search</a>
+  </div>
 

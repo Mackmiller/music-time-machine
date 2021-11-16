@@ -1,1 +1,5 @@
-<h2><%= currentUser.name %>'s Profile</h2>
+<h2>Profile Settings:</h2>
+User name: <h4><%= currentUser.name %></h4>
+<form action="/profile/edit">
+    <button class="btn bg-primary" type="submit">Edit</button>
+  </form>

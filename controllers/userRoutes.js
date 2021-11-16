@@ -32,7 +32,7 @@ router.put("/", (req, res)=>{
       )
       .then(updatedUser=>{
           console.log(updatedUser)
-        res.redirect("/")
+        res.redirect("/profile")
       }) 
 })
 
