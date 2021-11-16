@@ -143,7 +143,7 @@ button {
     margin: 0 10px;
 }
 
-#auth-email, #auth-password {
+#auth-email, #auth-password, #new-email, #new-password {
     font-family: inherit;
     font-weight: 600;
     width: 200px;
