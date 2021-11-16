@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 })
 // controllers middleware 
 app.use('/auth', require('./controllers/auth'))
-app.use('/search', require('./controllers/resultsRoutes'))
+app.use('/search', require('./controllers/searchRoutes'))
 app.use('/favorites', require('./controllers/favsRoutes'))
 app.use('/profile', require('./controllers/userRoutes'))
 

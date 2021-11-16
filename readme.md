@@ -16,6 +16,10 @@ HTML, CSS, JavaScript, PostgreSQL, Sequelize, Express, Node, EJS
 
 <img alt="erd" src="imgs/erd.png">
 
+## CRUD RESTful Routes
+
+<img alt="crud" src="imgs/crud.png">
+
 ## API
 
 Spotify Web API (client credentials flow)
@@ -23,7 +27,7 @@ Spotify Web API (client credentials flow)
 
 ### Example of how to call/invoke the API, and a description of what data comes back
 
-The Spotify Web API uses REST principles to return JSON metadata from the Spotify Data Catalogue. The client credentials flow, which I will be using for this project, does not ask the site user for their Spotify information; it only authenticates the request via the developer(client) credentials. Below is sample data that I created that includes the GET album method, given a Spotify album ID number. For my actual project, I will be using the GET search method.
+The Spotify Web API uses REST principles to return JSON metadata from the Spotify Data Catalogue. The client credentials flow, which I will be using for this project, does not ask the site user for their Spotify information; it only authenticates the request via the developer(client) credentials. Below is sample data that I created that includes the GET album method, given a Spotify album ID number. For my actual project, I will be using the GET search method, which incorporates track and track data.
 
 ```sh
 {
