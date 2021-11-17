@@ -4,6 +4,8 @@
         <div class="favorites">
             <h4><a href="<%= favorite.trackLink %>" target="_blank"> <%= favorite.trackName %></a></h4>
             <form class="button" action="/favorites/?_method=DELETE" method="POST">
+                <input hidden type="text" name="name" value="<%= favorite.trackName %>">
+                <input hidden type="text" name="link" value="<%= favorite.trackLink %>">
                 <input type="submit" value="Delete">
             </form>
         </div>

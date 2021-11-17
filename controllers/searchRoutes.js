@@ -48,8 +48,6 @@ router.post('/results', (req, res) => {
                     year: year
                 }).then(res=>{
                     console.log('db instance created: \n', res)
-                    //redirects back to favorites ejs
-                    //res.redirect("/favorites")
                 });
             })
             request.get(options, function(error, response, body) {
