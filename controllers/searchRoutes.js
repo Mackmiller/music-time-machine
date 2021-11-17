@@ -42,7 +42,7 @@ router.post('/results', (req, res) => {
                 where: {name: req.user.name}
             })
             .then(foundUser=> {
-                console.log("adding favorite to this user:", foundUser.name)
+                console.log("adding history to this user:", foundUser.name)
                 foundUser.createHistory({
                     genre: genre,
                     year: year
