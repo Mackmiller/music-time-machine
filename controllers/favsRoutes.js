@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
         }).then(fav=>{
             console.log('db instance created: \n', fav)
             //redirects back to favorites ejs
-            res.redirect("/search/results")
+            res.redirect("/favorites")
         });
     })
 })
