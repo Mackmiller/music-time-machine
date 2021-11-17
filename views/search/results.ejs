@@ -12,7 +12,7 @@
     
           <% let name = track.name %>
     <%  let spotifyLink = track.external_urls.spotify %>
-      <h3><a href="<%=spotifyLink%>"><%=name%></a></h3>
+      <h3><a href="<%=spotifyLink%>" target="_blank"><%=name%></a></h3>
       <%  let artistInfo = track.artists %>
       <%   artistInfo.forEach(artist => { %>
           <% let artistName = artist.name %>

@@ -2,7 +2,7 @@
     <h2>Favorite Songs:</h2>
     <%favorites.forEach(favorite => {%>
         <div class="favorites">
-            <h4><a href="<%= favorite.trackLink %>"> <%= favorite.trackName %></a></h4>
+            <h4><a href="<%= favorite.trackLink %>" target="_blank"> <%= favorite.trackName %></a></h4>
             <form class="button" action="/favorites/?_method=DELETE" method="POST">
                 <input type="submit" value="Delete">
             </form>
