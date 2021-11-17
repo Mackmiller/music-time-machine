@@ -144,6 +144,27 @@ button {
     margin-top: 10px;
 }
 
+.home {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0;
+    width: 500px;
+}
+
+.home a {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #65D36E;
+}
+
+.home h3 {
+    color: #65D36E;
+}
+
+.recordplayer {
+    margin-top: 20px;
+}
+
 #genre, #year {
     font-family: inherit;
     font-weight: 600;
