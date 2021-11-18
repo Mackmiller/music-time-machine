@@ -1,45 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;600;700&display=swap');
 
+/******* GENERAL *******/
 body {
     background-color: #191414;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
-
+/* header and nav */
 header {
     text-align: center;
 }
-
 nav ul {
-   text-align: right;
-    
+   text-align: right; 
 }
 nav li {
     display: inline-block;
     margin: 0 10px;
 }
 
+/* header tag, forms, and lists */
 h1 {
     font-size: 80px;
     font-family: 'Lobster', cursive;
-/*  font-family: 'Lobster', cursive;
-    font-family: 'Pacifico', cursive; */
 }
-
-h2,h3,h4 {
+h2,h3,h4, form, .nodata {
     text-align: center;
 }
-
+h2 a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #FFFFFF;;
+}
 h3 {
     margin: 10px 0 0 0;
 }
-
 h4 {
     padding: 5px;
     margin: 0;
 }
-
 h5 {
     font-weight: 400;
     color: #AAAAAA;
@@ -47,46 +46,12 @@ h5 {
     padding-top: 3px;
 }
 
-form {
-    text-align: center;
-}
-
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-h2 a {
-    text-decoration: underline;
-    font-weight: 600;
-    color: #FFFFFF;;
-}
-
-a {
-    font-weight: 500;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-.data a {
-    text-decoration: underline;
-    font-weight: 500;
-    color: #1DB954;
-}
-
-.data-search {
-    margin-top: 25px;
-}
-.data-search a {
-    text-decoration: underline;
-    font-weight: 500;
-    color: #1DB954;
-}
-
-
+/******* BUTTONS *******/
 button {
     font-family: inherit;
     font-weight: 600;
@@ -96,7 +61,27 @@ button {
     margin-top: 10px;
     cursor: pointer;
 }
-/* delete button for favorited tracks */
+
+/******* LINKS *******/
+a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+a:hover {
+    text-decoration: underline;
+}
+.data a, .data-search a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #1DB954;
+}
+.nodata a {
+    color: #AAAAAA;
+    text-decoration: underline;
+  }
+
+/******* SUBMIT INPUTS *******/
 .button input[type=submit] {
     background-color: #191414;
     color: #AAAAAA;
@@ -104,41 +89,40 @@ button {
     border: none;
     cursor: pointer;
 }
-
 .login {
     cursor: pointer;
 }
 
-.nodata {
-  text-align: center;
-}
-
-.nodata a {
-    color: #AAAAAA;
-    text-decoration: underline;
-  }
-
-.signup, .favorites {
+/* NAV STYLING */
+.nav {
     font-weight: 500;
     color: #AAAAAA;
     text-decoration: none;
 }
 
-.signup:hover, .favorites:hover {
+.nav:hover {
     font-weight: 500;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.favorites, .history {
+/******* SPECIFIC PAGE STYLING *******/
+
+/* history.ejs styling */
+.history {
     margin-top: 15px;
 }
+.data-search {
+    margin-top: 25px;
+}
 
+/* results.ejs styling */
 .album {
     margin: 30px 0;
     text-align: center;
 }
 
+/* login.ejs styling */
 .login {
     font-family: inherit;
     font-weight: 600;
@@ -148,29 +132,31 @@ button {
     margin-top: 10px;
 }
 
+/* home.ejs styling */
 .home {
     display: inline-block;
     text-align: center;
     margin: auto 0;
     width: 500px;
 }
-
 .home a {
     font-weight: 600;
     text-decoration: underline;
     color: #1DB954;
 }
-
 .home h3 {
     color: #1DB954;
 }
-
 .home p {
     margin-top: 70px;
     color: #AAAAAA;
     font-size: 12px;
 }
+.recordplayer {
+    margin-top: 20px;
+}
 
+/* search.ejs styling */
 .suggestions {
     text-align: justify;
     display: inline-block;
@@ -178,11 +164,6 @@ button {
     padding-top: 10px;
     padding-bottom: 20px;
 }
-
-.recordplayer {
-    margin-top: 20px;
-}
-
 #genre, #year {
     font-family: inherit;
     font-weight: 600;
@@ -191,6 +172,9 @@ button {
     margin: 0 10px;
 }
 
+/******* FORM INPUTS *******/
+
+/* login/signup.ejs styling */
 #auth-email, #auth-password, #new-email, #new-password, #new-name {
     font-family: inherit;
     font-weight: 600;
@@ -199,7 +183,7 @@ button {
     padding: 5px 10px;
     margin: 0 10px;
 }
-
+/* search.ejs styling */
 #submit {
     font-family: inherit;
     font-weight: 600;
@@ -208,9 +192,5 @@ button {
     border: none;
     padding: 10px;
     margin-left: 10px;
-    cursor: pointer;
-}
-
-#favorite-button {
     cursor: pointer;
 }

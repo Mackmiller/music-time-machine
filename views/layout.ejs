@@ -13,12 +13,12 @@
         <nav>
             <ul>
               <% if (!currentUser) { %>
-                <li><a class="signup" href="/auth/signup">Signup</a></li>
-                <li><a class="signup" href="/auth/login">Login</a></li>
+                <li><a class="nav" href="/auth/signup">Signup</a></li>
+                <li><a class="nav" href="/auth/login">Login</a></li>
               <% } else { %>
-                <li><a class="favorites" href="/search">Search</a></li>
-                <li><a class="signup" href="/profile">Profile</a></li>
-                <li><a class="signup" href="/auth/logout">Logout</a></li>
+                <li><a class="nav" href="/search">Search</a></li>
+                <li><a class="nav" href="/profile">Profile</a></li>
+                <li><a class="nav" href="/auth/logout">Logout</a></li>
               <% } %>
             </ul>
           </nav>
