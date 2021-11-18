@@ -161,6 +161,20 @@ button {
     color: #65D36E;
 }
 
+.home p {
+    margin-top: 70px;
+    color: #AAAAAA;
+    font-size: 12px;
+}
+
+.suggestions {
+    text-align: justify;
+    display: inline-block;
+    margin: auto 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 .recordplayer {
     margin-top: 20px;
 }
@@ -190,4 +204,8 @@ button {
     border: none;
     padding: 10px;
     margin-left: 10px;
+}
+
+#favorite-button {
+    cursor: pointer;
 }
