@@ -2,8 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-//static middleware
-// router.use(express.static( "public"))
 
 const request = require('request'); // "Request" library
 const client_id = `${process.env.SPOTIFY_CLIENT_ID}`; // Your client id
@@ -50,6 +48,7 @@ router.post('/results', (req, res) => {
                     console.log('db instance created: \n', res)
                 });
             })
+            //get api data for results page
             request.get(options, function(error, response, body) {
                 let data = body.tracks.items
                 //console.log(year)
@@ -58,15 +57,13 @@ router.post('/results', (req, res) => {
                 } else{
                 res.render("search/results", {year:year, genre: genre, data: data})
                 }
-            }
-            );
+            });
         } 
     })
 })
 
 //Retrieve all result histories
 router.get('/history', (req, res) => {
-
     db.user.findOne({
         where: {name: req.user.name}
     })
