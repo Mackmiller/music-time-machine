@@ -92,13 +92,13 @@ The Spotify Web API uses REST principles to return JSON metadata from the Spotif
 ## Local Setup
 
 - Install the LTS version of node.js from [here](https://nodejs.org/en/)
-- In a terminal, clone this repo.
+- In a terminal, clone this repo
 
 ```sh
 git clone https://github.com/Mackmiller/music-time-machine.git 
 ```
 
-- Navigate to the repo folder.
+- Navigate to the repo folder
 
 ```sh
 cd music-time-machine
@@ -116,4 +116,9 @@ npm install
 node index.js
 ```
 
-- On your browser, navigate to localhost3000 and the Music Time Machine project automatically appears on your locally hosted web page.
+- On your browser, navigate to localhost3000 and the Music Time Machine project automatically appears on your locally hosted web page:
+<img alt="Project Preview" src="imgs/project_preview.png" />
+
+## Deployment
+
+The app can also be accessed here: [insert link]
