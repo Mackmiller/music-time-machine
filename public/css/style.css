@@ -7,7 +7,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
-/* header and nav */
 header {
     text-align: center;
 }
@@ -18,8 +17,6 @@ nav li {
     display: inline-block;
     margin: 0 10px;
 }
-
-/* header tag, forms, and lists */
 h1 {
     font-size: 80px;
     font-family: 'Lobster', cursive;
@@ -45,7 +42,6 @@ h5 {
     margin: 0;
     padding-top: 3px;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
