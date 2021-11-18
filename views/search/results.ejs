@@ -1,31 +1,29 @@
-
-<div class= data>
+<div class=data>
   <a href="/search">Return to Search</a>
 </div>
 
 <h2>Top tunes in <%=year%> for <%=genre%> genre:</h2>
 <p>Click song name to go directly to Spotify.</p>
-  <%data.forEach(track => { %>
-    <div class=album>
-          <% let albumsInfo = track.album.images %>
-          <img src="<%=albumsInfo[0].url%>" alt="album cover" style="height: 300px">%>
-    
-          <% let name = track.name %>
-    <%  let spotifyLink = track.external_urls.spotify %>
-      <h3><a href="<%=spotifyLink%>" target="_blank"><%=name%></a></h3>
-      <%  let artistInfo = track.artists %>
-      <%   artistInfo.forEach(artist => { %>
-          <% let artistName = artist.name %>
-          <h5><%=artistName%></h5>
-          <%   }) %>
-          <form method="POST" action="/favorites">
-              <input hidden type="text" name="name" value="<%= name %>">
-              <input hidden type="text" name="link" value="<%= spotifyLink %>">
-              <button type="submit">Add to Favorites</button>
-          </form>
-    </div>
+<% data.forEach(track => { %>
+<div class=album>
+  <% let albumsInfo = track.album.images %>
+  <img src="<%=albumsInfo[0].url%>" alt="album cover" style="height: 300px">
+  <% let name = track.name %>
+  <% let spotifyLink = track.external_urls.spotify %>
+  <h3><a href="<%=spotifyLink%>" target="_blank"><%=name%></a></h3>
+  <% let artistInfo = track.artists %>
+  <% artistInfo.forEach(artist => { %>
+    <% let artistName = artist.name %>
+    <h5><%=artistName%></h5>
   <% }) %>
-  <div class= data>
-    <a href="/search">Return to Search</a>
-  </div>
+  <form method="POST" action="/favorites">
+      <input hidden type="text" name="name" value="<%= name %>">
+      <input hidden type="text" name="link" value="<%= spotifyLink %>">
+      <button type="submit">Add to Favorites</button>
+  </form>
+</div>
+<% }) %>
+<div class=data>
+  <a href="/search">Return to Search</a>
+</div>
 
