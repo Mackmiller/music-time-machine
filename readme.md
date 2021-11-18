@@ -2,7 +2,7 @@
 
 # Music Time Machine
 
-Particularly fond of the music scene from 2009? Or 1987? Revisit an entire past year of music for your favorite genre.
+Relive your most formative life stages by filtering top music genres by year. Music Time Machine is a CRUD RESTful API application that utilizes the Node.js environment, Express.js server and a PostgreSQL database. Data is from the Spotify Web API.
 
 ## Tech stack
 
