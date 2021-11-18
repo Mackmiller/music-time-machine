@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;500;600;700&display=swap');
 
 body {
-    background-color: #131313;
+    background-color: #191414;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -74,7 +74,7 @@ a:hover {
 .data a {
     text-decoration: underline;
     font-weight: 500;
-    color: #65D36E;
+    color: #1DB954;
 }
 
 .data-search {
@@ -83,7 +83,7 @@ a:hover {
 .data-search a {
     text-decoration: underline;
     font-weight: 500;
-    color: #65D36E;
+    color: #1DB954;
 }
 
 
@@ -94,15 +94,19 @@ button {
     border: none;
     padding: 5px 8px;
     margin-top: 10px;
+    cursor: pointer;
 }
 /* delete button for favorited tracks */
 .button input[type=submit] {
-    background-color: #131313;
+    background-color: #191414;
     color: #AAAAAA;
     text-decoration: underline;
     border: none;
     cursor: pointer;
+}
 
+.login {
+    cursor: pointer;
 }
 
 .nodata {
@@ -154,11 +158,11 @@ button {
 .home a {
     font-weight: 600;
     text-decoration: underline;
-    color: #65D36E;
+    color: #1DB954;
 }
 
 .home h3 {
-    color: #65D36E;
+    color: #1DB954;
 }
 
 .home p {
@@ -200,10 +204,11 @@ button {
     font-family: inherit;
     font-weight: 600;
     font-size: 20px;
-    background-color: #65D36E;
+    background-color: #1DB954;
     border: none;
     padding: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #favorite-button {
