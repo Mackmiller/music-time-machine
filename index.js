@@ -73,10 +73,6 @@ app.get('/search/history', isLoggedIn, (req, res)=>{
     res.render('search/history')
 })
 
-
-
-
-
 app.listen(process.env.PORT || 3000, ()=>{
     console.log("auth_practice running on port 3000")
 })
