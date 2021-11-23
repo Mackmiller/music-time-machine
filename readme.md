@@ -121,4 +121,4 @@ node index.js
 
 ## Deployment
 
-The app can also be accessed here: [insert link]
+The app is also deployed on Heroku and can be accessed [here](https://music-time-machine.herokuapp.com/)
