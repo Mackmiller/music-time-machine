@@ -7,6 +7,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
 header {
     text-align: center;
 }
@@ -18,6 +19,7 @@ nav li {
     margin: 0 10px;
 }
 h1 {
+    color: #F03D71;
     font-size: 80px;
     font-family: 'Lobster', cursive;
 }
@@ -70,7 +72,7 @@ a:hover {
 .data a, .data-search a {
     text-decoration: underline;
     font-weight: 500;
-    color: #1DB954;
+    color: #F03D71;
 }
 .nodata a {
     color: #AAAAAA;
@@ -138,16 +140,17 @@ a:hover {
 .home a {
     font-weight: 600;
     text-decoration: underline;
-    color: #1DB954;
+    color: #F03D71;
 }
 .home h3 {
-    color: #1DB954;
+    color: #F03D71;
 }
 .home p {
     margin-top: 70px;
     color: #AAAAAA;
     font-size: 12px;
 }
+
 .recordplayer {
     margin-top: 20px;
 }
@@ -184,7 +187,7 @@ a:hover {
     font-family: inherit;
     font-weight: 600;
     font-size: 20px;
-    background-color: #1DB954;
+    background-color: #F03D71;
     border: none;
     padding: 10px;
     margin-left: 10px;
