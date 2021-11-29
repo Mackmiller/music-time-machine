@@ -117,7 +117,7 @@ node index.js
 ```
 
 - On your browser, navigate to localhost3000 and the Music Time Machine project automatically appears on your locally hosted web page:
-<img alt="Project Preview" src="imgs/project_preview.png" />
+<img alt="Project Preview" src="imgs/project_screens.png" />
 
 ## Deployment
 
