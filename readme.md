@@ -116,8 +116,10 @@ npm install
 node index.js
 ```
 
-- On your browser, navigate to localhost3000 and the Music Time Machine project automatically appears on your locally hosted web page:
-<img alt="Project Preview" src="imgs/project_screens.png" />
+- On your browser, navigate to localhost3000 and the Music Time Machine project automatically appears on your locally hosted web page. Here are some project screenshots:
+<p align="center">  
+  <img alt="Project Preview" src="imgs/project_screens.png" />
+</p>
 
 ## Deployment
 
